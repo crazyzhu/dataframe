@@ -6,21 +6,21 @@ package com.baidu.ssp;
 import java.util.List;
 
 /**
- * ÁĞ¶ÔÏó
+ * åˆ—å¯¹è±¡
  * @author zhuyijie
  */
 public interface Column {
 
     /**
      *
-     * »ñÈ¡¸ÃÁĞµÄÃû³Æ
+     * è·å–è¯¥åˆ—çš„åç§°
      *
      * */
     String title();
 
     /**
      *
-     * »ñÈ¡¸ÃÁĞµÄÖµÁĞ±í
+     * è·å–è¯¥åˆ—çš„å€¼åˆ—è¡¨
      *
      * */
     List<Object> values();

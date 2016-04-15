@@ -12,7 +12,7 @@ import com.google.common.base.Predicate;
 import java.util.List;
 
 /**
- * ²Ù×÷FrameµÄÁ÷Ê½½Ó¿Ú
+ * æ“ä½œFrameçš„æµå¼æ¥å£
  * @author zhuyijie
  */
 public final class FluentFrame {
@@ -24,13 +24,13 @@ public final class FluentFrame {
     }
 
     /**
-     * ¹¹½¨FluentFrame
+     * æ„å»ºFluentFrame
      *
      * @param frame
-     * Êı¾İ±í
+     * æ•°æ®è¡¨
      *
      * @return
-     * Á÷Ê½Frame
+     * æµå¼Frame
      * */
     public static FluentFrame from(Frame frame) {
         return new FluentFrame(frame);
@@ -38,15 +38,15 @@ public final class FluentFrame {
 
     /**
      *
-     * ×óÁ¬Ò»¸öFrame
+     * å·¦è¿ä¸€ä¸ªFrame
      *
      * @param other
-     * ´ıÁ¬½ÓµÄÄ¿±êFrame
+     * å¾…è¿æ¥çš„ç›®æ ‡Frame
      * @param on
-     * Á¬½Ó×Ö¶Î
+     * è¿æ¥å­—æ®µ
      *
      * @return
-     * ½á¹ûFluentFrame
+     * ç»“æœFluentFrame
      *
      * */
     public FluentFrame leftJoin(Frame other, List<String> on) {
@@ -55,15 +55,15 @@ public final class FluentFrame {
     }
     /**
      *
-     * full join Ò»¸öFrame
+     * full join ä¸€ä¸ªFrame
      *
      * @param other
-     * ´ıÁ¬½ÓµÄÄ¿±êFrame
+     * å¾…è¿æ¥çš„ç›®æ ‡Frame
      * @param on
-     * Á¬½Ó×Ö¶Î
+     * è¿æ¥å­—æ®µ
      *
      * @return
-     * Á÷Ê½Frame
+     * æµå¼Frame
      *
      * */
     public FluentFrame outJoin(Frame other, List<String> on) {
@@ -73,15 +73,15 @@ public final class FluentFrame {
 
     /**
      *
-     * ÓÒÁ¬Ò»¸öFrame
+     * å³è¿ä¸€ä¸ªFrame
      *
      * @param other
-     * ´ıÁ¬½ÓµÄÄ¿±êFrame
+     * å¾…è¿æ¥çš„ç›®æ ‡Frame
      * @param on
-     * Á¬½Ó×Ö¶Î
+     * è¿æ¥å­—æ®µ
      *
      * @return
-     * Á÷Ê½Frame
+     * æµå¼Frame
      *
      * */
     public FluentFrame rightJoin(Frame other, List<String> on) {
@@ -91,13 +91,13 @@ public final class FluentFrame {
 
     /**
      *
-     * ¶ÔÊı¾İ±í½øĞĞÅÅĞò
+     * å¯¹æ•°æ®è¡¨è¿›è¡Œæ’åº
      *
      * @param orders
-     * ÅÅĞò×Ö¶Î
+     * æ’åºå­—æ®µ
      *
      * @return
-     * Á÷Ê½Frame
+     * æµå¼Frame
      *
      * */
     public FluentFrame sort(List<Order> orders) {
@@ -107,13 +107,13 @@ public final class FluentFrame {
 
     /**
      *
-     * ¶ÔÊı¾İ±í½øĞĞ¹ıÂË
+     * å¯¹æ•°æ®è¡¨è¿›è¡Œè¿‡æ»¤
      *
      * @param condition
-     * ÅÅĞò×Ö¶Î
+     * æ’åºå­—æ®µ
      *
      * @return
-     * Á÷Ê½Frame
+     * æµå¼Frame
      *
      * */
     public FluentFrame filter(Predicate<Row> condition) {
@@ -122,13 +122,13 @@ public final class FluentFrame {
     }
     /**
      *
-     * ÓëÁíÍâÒ»¸öFrame½øĞĞunion
+     * ä¸å¦å¤–ä¸€ä¸ªFrameè¿›è¡Œunion
      *
      * @param other
-     * ´ıunionµÄFrame
+     * å¾…unionçš„Frame
      *
      * @return
-     * unionµÄ½á¹û
+     * unionçš„ç»“æœ
      *
      * */
     public FluentFrame union(Frame other) {
@@ -138,15 +138,15 @@ public final class FluentFrame {
 
     /**
      *
-     * ½øĞĞ·Ö×é¾ÛºÏ¼ÆËã
+     * è¿›è¡Œåˆ†ç»„èšåˆè®¡ç®—
      *
      * @param by
-     * ·Ö×é×Ö¶Î
+     * åˆ†ç»„å­—æ®µ
      * @param aggregates
-     * ¾ÛºÏº¯Êı
+     * èšåˆå‡½æ•°
      *
      * @return
-     * ¼ÆËãºó½á¹û
+     * è®¡ç®—åç»“æœ
      *
      * */
     public FluentFrame aggregate(List<String> by, List<AggregateFunction> aggregates) {
@@ -156,15 +156,15 @@ public final class FluentFrame {
 
     /**
      *
-     * ¸ù¾İÔ­ÓĞ±íÖĞµÄÖµ¼ÆËãµÃµ½ĞÂÖµ
+     * æ ¹æ®åŸæœ‰è¡¨ä¸­çš„å€¼è®¡ç®—å¾—åˆ°æ–°å€¼
      *
      * @param title
-     * ĞÂÖµµÄ×Ö¶Î
+     * æ–°å€¼çš„å­—æ®µ
      * @param function
-     * ¼ÆËãº¯Êı
+     * è®¡ç®—å‡½æ•°
      *
      * @return
-     * °üº¬¼ÆËã½á¹ûµÄÁ÷Ê½Frame
+     * åŒ…å«è®¡ç®—ç»“æœçš„æµå¼Frame
      *
      * */
     public FluentFrame compute(String title, Function<Row, Object> function) {
@@ -174,15 +174,15 @@ public final class FluentFrame {
 
     /**
      *
-     * ¶ÔÒ»¸ö×Ö¶Î½øĞĞ×ª»¯
+     * å¯¹ä¸€ä¸ªå­—æ®µè¿›è¡Œè½¬åŒ–
      *
      * @param title
-     * ĞèÒª½øĞĞ×ª»¯µÄ×Ö¶ÎµÄÖµ
+     * éœ€è¦è¿›è¡Œè½¬åŒ–çš„å­—æ®µçš„å€¼
      * @param function
-     * ×ª»¯º¯Êı
+     * è½¬åŒ–å‡½æ•°
      *
      * @return
-     * ×ª»¯ºóµÄ½á¹û
+     * è½¬åŒ–åçš„ç»“æœ
      *
      * */
     public <K, V> FluentFrame transform(String title, Function<K, V> function) {
@@ -192,15 +192,15 @@ public final class FluentFrame {
 
     /**
      *
-     * ¶Ô½á¹û½øĞĞÇĞÆ¬
+     * å¯¹ç»“æœè¿›è¡Œåˆ‡ç‰‡
      *
      * @param begin
-     * ÇĞÆ¬µÄ½á¹ûĞĞºÅ
+     * åˆ‡ç‰‡çš„ç»“æœè¡Œå·
      * @param size
-     * ½á¹û¼¯µÄ´óĞ¡
+     * ç»“æœé›†çš„å¤§å°
      *
      * @return
-     * ÇĞÆ¬ºóµÄ½á¹û
+     * åˆ‡ç‰‡åçš„ç»“æœ
      *
      * */
     public FluentFrame limit(int begin, int size) {
@@ -210,7 +210,7 @@ public final class FluentFrame {
 
     /**
      *
-     * ×ª»¯³ÉFrame¶ÔÏó
+     * è½¬åŒ–æˆFrameå¯¹è±¡
      *
      * */
     public Frame toFrame() {

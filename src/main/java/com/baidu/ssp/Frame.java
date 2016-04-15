@@ -8,111 +8,111 @@ import java.util.List;
 
 /**
  *
- * Êı¾İ±í¶ÔÏó
+ * æ•°æ®è¡¨å¯¹è±¡
  *
  * @author zhuyijie
  */
 public interface Frame extends Iterable<Row> {
     /**
-     * »ñÈ¡±í¸ñµÄ¸ß¶È£¬¼´°üº¬ĞĞµÄÊıÁ¿
+     * è·å–è¡¨æ ¼çš„é«˜åº¦ï¼Œå³åŒ…å«è¡Œçš„æ•°é‡
      *
      * @return
-     * ±í¸ñµÄ¸ß¶È
+     * è¡¨æ ¼çš„é«˜åº¦
      *
      * */
     int height();
 
     /**
      *
-     * »ñÈ¡±í¸ñµÄËùÓĞÁĞÃû
+     * è·å–è¡¨æ ¼çš„æ‰€æœ‰åˆ—å
      *
-     * @return ÁĞÃûÁĞ±í
+     * @return åˆ—ååˆ—è¡¨
      *
      * */
     List<String> titles();
 
     /**
      *
-     * »ñÈ¡ĞĞ¶ÔÏó
+     * è·å–è¡Œå¯¹è±¡
      *
      * @param index
-     * ĞĞºÅ
+     * è¡Œå·
      *
      * @return
-     * ĞĞ¶ÔÏó
+     * è¡Œå¯¹è±¡
      *
      * */
     Row row(int index);
 
     /**
      *
-     * »ñÈ¡ÁĞ¶ÔÏó
+     * è·å–åˆ—å¯¹è±¡
      *
      * @param title
-     * ÁĞÃû
+     * åˆ—å
      *
      * @return
-     * ÁĞ¶ÔÏó
+     * åˆ—å¯¹è±¡
      *
      * */
     Column column(String title);
 
     /**
-     * ÏòFrameÖĞÔö¼ÓÒ»ÁĞ
+     * å‘Frameä¸­å¢åŠ ä¸€åˆ—
      *
      * @param column
-     * ´ıÔö¼ÓµÄÁĞ
+     * å¾…å¢åŠ çš„åˆ—
      *
      * @return
-     * ¸üĞÂºóµÄFrame
+     * æ›´æ–°åçš„Frame
      * */
     Frame addColumn(Column column);
 
     /**
      *
-     * É¾³ıFrameÖĞµÄÄ³ÁĞ
+     * åˆ é™¤Frameä¸­çš„æŸåˆ—
      *
      * @param title
-     * ´ıÉ¾³ıµÄÁĞµÄÁĞÃû
+     * å¾…åˆ é™¤çš„åˆ—çš„åˆ—å
      *
      * @return
-     * ¸üĞÂºóµÄFrame
+     * æ›´æ–°åçš„Frame
      *
      * */
     Frame removeColumn(String title);
 
     /**
      *
-     * Ñ¡È¡FrameÖĞµÄÄ³Ğ©ÁĞ
+     * é€‰å–Frameä¸­çš„æŸäº›åˆ—
      *
      * @param titles
-     * ´ıÑ¡È¡µÄÁĞÃû
+     * å¾…é€‰å–çš„åˆ—å
      *
      * @return
-     * ¸ù¾İÖ¸¶¨ÁĞÃûÑ¡È¡µÃµ½µÄFrame
+     * æ ¹æ®æŒ‡å®šåˆ—åé€‰å–å¾—åˆ°çš„Frame
      * */
     Frame select(List<String> titles);
 
     /**
      *
-     * ĞŞ¸ÄÁĞÃû
+     * ä¿®æ”¹åˆ—å
      * @param src
-     * Ô­Ê¼ÁĞÃû
+     * åŸå§‹åˆ—å
      * @param dest
-     * Ä¿±êÁĞÃû
+     * ç›®æ ‡åˆ—å
      *
      * @return
-     * ĞŞ¸ÄÁĞÃûºóµÃµ½µÄFrame
+     * ä¿®æ”¹åˆ—ååå¾—åˆ°çš„Frame
      *
      * */
     Frame rename(String src, String dest);
 
     /**
      *
-     * »ñÈ¡ĞĞµü´úÆ÷
+     * è·å–è¡Œè¿­ä»£å™¨
      *
      * @return
-     * ĞĞµü´úÆ÷
+     * è¡Œè¿­ä»£å™¨
      *
      * */
     Iterator<Row> iterator();

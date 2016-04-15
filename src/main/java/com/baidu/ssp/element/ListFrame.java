@@ -29,7 +29,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
 
 /**
- * FrameµÄÊµÏÖÁĞ£¬Ê¹ÓÃList×öÎª´æ´¢»ù´¡Êı¾İµÄÊı¾İ½á¹¹
+ * Frameçš„å®ç°åˆ—ï¼Œä½¿ç”¨Liståšä¸ºå­˜å‚¨åŸºç¡€æ•°æ®çš„æ•°æ®ç»“æ„
  */
 public class ListFrame implements Frame {
 
@@ -201,7 +201,7 @@ public class ListFrame implements Frame {
 
     /**
      *
-     * ÓëFrame¹²Ïí»ù´¡Êı¾İµÄĞĞ¶ÔÏó
+     * ä¸Frameå…±äº«åŸºç¡€æ•°æ®çš„è¡Œå¯¹è±¡
      *
      * */
     private class ListRow implements Row {

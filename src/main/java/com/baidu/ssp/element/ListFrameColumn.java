@@ -8,12 +8,12 @@ import com.baidu.ssp.Column;
 import java.util.List;
 
 /**
- * Ê¹ÓÃÁĞ±íÊµÏÖµÄÁĞ¶ÔÏó
+ * ä½¿ç”¨åˆ—è¡¨å®ç°çš„åˆ—å¯¹è±¡
  */
 public class ListFrameColumn implements Column {
-    // ÁĞÃû
+    // åˆ—å
     private String title;
-    // ÖµÁĞ±í
+    // å€¼åˆ—è¡¨
     private List<Object> values;
 
     public ListFrameColumn(String title, List<Object> values) {
